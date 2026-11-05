@@ -1,6 +1,7 @@
 
 import { motion } from 'framer-motion'
 import { Award } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 export default function Hero() {
   return (
@@ -44,7 +45,7 @@ export default function Hero() {
           initial={{ opacity: 0, x: -25 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="relative mx-auto flex h-[460px] w-full max-w-[650px] items-end justify-center sm:h-[540px] lg:h-[680px]"
+          className="relative mx-auto flex h-[460px] w-full max-w-[650px] translate-x-4 items-end justify-center sm:h-[540px] sm:translate-x-8 lg:h-[680px] lg:translate-x-12"
         >
           {/* Yellow Abstract Shape */}
           <div
@@ -55,10 +56,10 @@ export default function Hero() {
             }}
           />
 
-          {/* Dark Shape Behind Image */}
+        
           <div className="absolute bottom-0 left-[17%] h-[76%] w-[69%] rounded-t-[48%] rounded-b-[28px] bg-[#123d3c]" />
 
-          {/* ADD YOUR IMAGE HERE */}
+         
           <div className="absolute inset-x-0 bottom-0 z-10 flex h-full items-end justify-center">
             {
             <img
@@ -91,15 +92,15 @@ export default function Hero() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="absolute bottom-[2%] right-0 z-20 w-[235px] rounded-[24px] bg-[#062c2e] px-5 py-5 text-center shadow-xl sm:right-[2%] sm:w-[260px]"
+            className="absolute bottom-[2%] right-0 z-20 w-[235px] px-5 py-5 text-center sm:right-[2%] sm:w-[260px]"
           >
 
 {/* Trusted By Image */}
-<div className="mt-3 flex justify-center">
+<div className="mt-3 flex justify-center translate-x-[-10px]">
   <img
     src="https://cdn.prod.website-files.com/668cb7adec02e140422345de/66f638f0e915508fda239b73_Trusted%20By%20Image.avif"
     alt="Trusted by students"
-    className="h-auto w-[190px] object-contain"
+    className="h-auto w-[480px] object-contain"
   />
 </div>
 
@@ -135,12 +136,12 @@ export default function Hero() {
           </p>
 
           {/* Get Started Button */}
-          <a
-            href="/courses"
-            className="mt-8 inline-flex min-w-[145px] items-center justify-center rounded-[3px] border border-white/20 bg-white/[0.03] px-7 py-4 text-sm font-semibold text-white transition duration-300 hover:border-yellow-400 hover:bg-yellow-400 hover:text-[#062c2e]"
-          >
-            Get Started
-          </a>
+      <Link
+  to="/contact"
+  className="mt-8 inline-flex min-w-[145px] items-center justify-center rounded-[3px] border border-white/20 bg-white/[0.03] px-7 py-4 text-sm font-semibold text-white transition duration-300 hover:scale-95"
+>
+  Get Started
+</Link>
         </motion.div>
       </div>
     </section>

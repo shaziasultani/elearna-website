@@ -1,5 +1,7 @@
+
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const features = [
   {
@@ -100,29 +102,22 @@ export default function WhyWeAre() {
               {feature.description}
             </p>
 
-            {/* Button appears smoothly on hover */}
-            <div className="mt-auto pt-6">
-              <a
-                href="#get-started"
+            {/* Get Started Button */}
+            <div className="relative z-50 mt-auto w-full pt-6">
+              <Link
+                to="/contact"
                 className="
+                  pointer-events-auto relative z-50
                   inline-flex min-h-[39px] min-w-[132px]
-                  items-center justify-center rounded-[2px]
-                  bg-[#10272b] px-6 py-3 text-xs font-medium text-white
-                  translate-y-0 opacity-100 pointer-events-auto
-                  [@media(hover:hover)]:translate-y-3
-                  [@media(hover:hover)]:opacity-0
-                  [@media(hover:hover)]:pointer-events-none
-                  transition-[opacity,transform] duration-500 ease-in-out
-                  group-hover:translate-y-0
-                  group-hover:opacity-100
-                  group-hover:pointer-events-auto
-                  group-focus-within:translate-y-0
-                  group-focus-within:opacity-100
-                  group-focus-within:pointer-events-auto
+                  cursor-pointer items-center justify-center
+                  rounded-[2px] bg-[#10272b]
+                  px-6 py-3 text-xs font-medium text-white
+                  transition-all duration-500 ease-in-out
+                  hover:scale-95
                 "
               >
                 Get Started
-              </a>
+              </Link>
             </div>
           </motion.article>
         ))}

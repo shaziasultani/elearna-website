@@ -8,6 +8,7 @@ import {
   Check,
 } from 'lucide-react'
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 const courses = [
   {
@@ -70,6 +71,19 @@ const courses = [
 
 export default function TrendingCourses() {
   const [hoveredCourse, setHoveredCourse] = useState(null)
+
+  const handleCourseDetailsClick = () => {
+    const topCoursesSection = Array.from(
+      document.querySelectorAll('section')
+    ).find((section) =>
+      section.querySelector('h2')?.textContent.trim() === 'Top online courses'
+    )
+
+    topCoursesSection?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    })
+  }
 
   return (
     <section className="overflow-hidden bg-[#eff7f9] px-5 py-16 sm:px-8 sm:py-20 lg:px-12 lg:py-24">
@@ -230,19 +244,20 @@ export default function TrendingCourses() {
 
                   {/* Buttons */}
                   <div className="mt-7 grid grid-cols-2 gap-2.5">
-                    <a
-                      href="#course-details"
+                    <button
+                      type="button"
+                      onClick={handleCourseDetailsClick}
                       className="flex min-h-[50px] items-center justify-center rounded-md bg-[#ffb900] px-3 py-3 text-center text-sm font-medium text-[#10282c] transition-all duration-300 hover:scale-105 hover:bg-[#ffc52e]"
                     >
                       Course Details
-                    </a>
+                    </button>
 
-                    <a
-                      href="#enroll"
+                    <Link
+                      to="/contact"
                       className="flex min-h-[50px] items-center justify-center rounded-md bg-[#10282c] px-3 py-3 text-center text-sm font-medium text-white transition-all duration-300 hover:scale-105 hover:bg-[#24464b]"
                     >
                       Enroll
-                    </a>
+                    </Link>
                   </div>
                 </motion.div>
               </motion.article>

@@ -1,6 +1,8 @@
+
 import React from 'react'
 import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const features = [
   'Skill-based instruction',
@@ -147,16 +149,20 @@ export default function WhatWeOffer() {
               </p>
             </div>
 
-            <motion.a
-              href="#courses"
+            <motion.div
               whileHover={{ scale: 1.06 }}
               whileTap={{ scale: 0.96 }}
               transition={{ duration: 0.25 }}
-              className="inline-flex min-h-12 shrink-0 items-center justify-center gap-2 rounded-md bg-[#10282c] px-7 py-3 text-sm font-semibold text-white"
+              className="shrink-0"
             >
-              Get Started
-              <ArrowRight size={16} />
-            </motion.a>
+              <Link
+                to="/contact"
+                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-[#10282c] px-7 py-3 text-sm font-semibold text-white"
+              >
+                Get Started
+                <ArrowRight size={16} />
+              </Link>
+            </motion.div>
           </motion.div>
 
         </motion.div>
