@@ -108,7 +108,10 @@ export default function WhyWeAre() {
                   inline-flex min-h-[39px] min-w-[132px]
                   items-center justify-center rounded-[2px]
                   bg-[#10272b] px-6 py-3 text-xs font-medium text-white
-                  opacity-0 translate-y-3 pointer-events-none
+                  translate-y-0 opacity-100 pointer-events-auto
+                  [@media(hover:hover)]:translate-y-3
+                  [@media(hover:hover)]:opacity-0
+                  [@media(hover:hover)]:pointer-events-none
                   transition-[opacity,transform] duration-500 ease-in-out
                   group-hover:translate-y-0
                   group-hover:opacity-100

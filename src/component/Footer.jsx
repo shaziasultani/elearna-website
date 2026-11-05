@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import {
@@ -17,16 +18,16 @@ const footerColumns = [
       { label: 'Home', href: '/' },
       { label: 'Events', href: '/events' },
       { label: 'Career', href: '/career' },
-      { label: 'Instructor', href: '/instructor' },
+      { label: 'Team', href: '/team' },
     ],
   },
   {
     title: 'Popular courses',
     links: [
-      { label: 'Finance', href: '/courses/finance' },
-      { label: 'Management', href: '/courses/management' },
-      { label: 'Design', href: '/courses/design' },
-      { label: 'Web development', href: '/courses/web-development' },
+      { label: 'Finance', href: '/finance' },
+      { label: 'Management', href: '/management' },
+      { label: 'Design', href: '/design-course' },
+      { label: 'Web development', href: '/course-details' },
     ],
   },
   {
@@ -34,19 +35,19 @@ const footerColumns = [
     links: [
       { label: 'About', href: '/about-one' },
       { label: 'Courses', href: '/course-one' },
+      { label: 'FAQ', href: '/faq' },
+      { label: 'Pricing', href: '/pricing-one' },
       { label: 'Blog', href: '/blog' },
       { label: 'Contact', href: '/contact' },
-      { label: 'License', href: '/license' },
-      { label: 'Pricing', href: '/pricing' },
-      { label: '404!', href: '/404' },
     ],
   },
   {
-    title: 'CMS',
+    title: 'More pages',
     links: [
-      { label: 'Course details', href: '/course-one' },
-      { label: 'Instructor details', href: '/instructor' },
-      { label: 'Blog details', href: '/blog' },
+      { label: 'Course details', href: '/course-details' },
+      { label: 'Career opportunities', href: '/career' },
+      { label: 'Events', href: '/events' },
+      { label: 'Team', href: '/team' },
     ],
   },
 ]

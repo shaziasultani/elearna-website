@@ -82,30 +82,30 @@ export default function Testimonials() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="grid grid-cols-2 gap-6 pb-1 sm:gap-10"
+            className="grid grid-cols-2 gap-2 pb-1 sm:gap-10"
           >
-            <div className="flex items-center gap-4">
-              <h3 className="text-4xl font-semibold tracking-tight sm:text-5xl">
+            <div className="flex items-center gap-2 sm:gap-4">
+              <h3 className="text-2xl font-semibold tracking-tight sm:text-5xl">
                 70M
               </h3>
 
-              <div className="h-10 w-px shrink-0 bg-white/30" />
+              <div className="h-8 w-px shrink-0 bg-white/30 sm:h-10" />
 
-              <p className="text-xs uppercase leading-6 tracking-wide text-white/50 sm:text-sm">
+              <p className="text-[10px] uppercase leading-5 tracking-wide text-white/50 sm:text-sm sm:leading-6">
                 Successful
                 <br />
                 Students
               </p>
             </div>
 
-            <div className="flex items-center gap-4">
-              <h3 className="text-4xl font-semibold tracking-tight sm:text-5xl">
+            <div className="flex items-center gap-2 sm:gap-4">
+              <h3 className="text-2xl font-semibold tracking-tight sm:text-5xl">
                 25K
               </h3>
 
-              <div className="h-10 w-px shrink-0 bg-white/30" />
+              <div className="h-8 w-px shrink-0 bg-white/30 sm:h-10" />
 
-              <p className="text-xs uppercase leading-6 tracking-wide text-white/50 sm:text-sm">
+              <p className="text-[10px] uppercase leading-5 tracking-wide text-white/50 sm:text-sm sm:leading-6">
                 Global Job
                 <br />
                 Placements

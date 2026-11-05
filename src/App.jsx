@@ -36,6 +36,14 @@ import CareerWhyUs from './component/CareerWhyUs'
 import CareerJobs from './component/CareerJobs'
 import EventsHero from './component/EventsHero'
 import EventsList from './component/EventsList'
+import TeamHero from './component/TeamHero'
+import ExpertTeam from './component/ExpertTeam'
+import Management from './component/Management'
+import FinanceHero from './component/FinanceHero'
+import CourseDetailsHero from './component/CourseDetailsHero'
+import DesignHero from './component/DesignHero'
+import Login from './component/Login'
+import Register from './component/Register'
 
 // Reusable page transition wrapper
 const PageWrapper = ({ children }) => (
@@ -52,13 +60,17 @@ const PageWrapper = ({ children }) => (
 export default function App() {
   const location = useLocation()
 
+  const isAuthPage =
+    location.pathname === '/login' ||
+    location.pathname === '/register'
+
   return (
     <>
       {/* Automatically scroll to the top when changing pages */}
       <ScrollToTop />
 
-      {/* One shared navbar for all pages */}
-      <Navbar />
+      {/* Hide Navbar on Login and Register Pages */}
+      {!isAuthPage && <Navbar />}
 
       {/* Page transitions */}
       <AnimatePresence mode="wait">
@@ -107,6 +119,32 @@ export default function App() {
             }
           />
 
+          {/* Angular Course Details Page */}
+          <Route
+            path="/course-details"
+            element={
+              <PageWrapper>
+                <CourseDetailsHero />
+                <TopCourses />
+                <BlogCTA />
+                <Footer />
+              </PageWrapper>
+            }
+          />
+
+          {/* Design Course Details Page */}
+          <Route
+            path="/design-course"
+            element={
+              <PageWrapper>
+                <DesignHero />
+                <TopCourses />
+                <BlogCTA />
+                <Footer />
+              </PageWrapper>
+            }
+          />
+
           {/* Blog Page */}
           <Route
             path="/blog"
@@ -143,6 +181,7 @@ export default function App() {
               </PageWrapper>
             }
           />
+
           {/* Pricing One Page */}
           <Route
             path="/pricing-one"
@@ -159,6 +198,7 @@ export default function App() {
             }
           />
 
+          {/* Career Page */}
           <Route
             path="/career"
             element={
@@ -178,13 +218,71 @@ export default function App() {
             element={
               <PageWrapper>
                 <EventsHero />
-                  <EventsList />
-                 <BlogCTA />
+                <EventsList />
+                <BlogCTA />
                 <Footer />
               </PageWrapper>
             }
           />
 
+          {/* Team Page */}
+          <Route
+            path="/team"
+            element={
+              <PageWrapper>
+                <TeamHero />
+                <ExpertTeam />
+                <BlogCTA />
+                <Footer />
+              </PageWrapper>
+            }
+          />
+
+          {/* Management Page */}
+          <Route
+            path="/management"
+            element={
+              <PageWrapper>
+                <Management />
+                <TopCourses />
+                <BlogCTA />
+                <Footer />
+              </PageWrapper>
+            }
+          />
+
+          {/* Finance Page */}
+          <Route
+            path="/finance"
+            element={
+              <PageWrapper>
+                <FinanceHero />
+                <TrendingCourses />
+                <BlogCTA />
+                <Footer />
+              </PageWrapper>
+            }
+          />
+
+          {/* Login Page */}
+          <Route
+            path="/login"
+            element={
+              <PageWrapper>
+                <Login />
+              </PageWrapper>
+            }
+          />
+
+          {/* Register Page */}
+          <Route
+            path="/register"
+            element={
+              <PageWrapper>
+                <Register />
+              </PageWrapper>
+            }
+          />
 
         </Routes>
       </AnimatePresence>

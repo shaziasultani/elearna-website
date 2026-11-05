@@ -1,3 +1,4 @@
+
 import { useState } from 'react'
 import {
   Star,
@@ -108,6 +109,7 @@ export default function TrendingCourses() {
                 }}
                 onMouseEnter={() => setHoveredCourse(course.id)}
                 onMouseLeave={() => setHoveredCourse(null)}
+                onTouchStart={() => setHoveredCourse(course.id)}
                 className="group relative min-w-0 bg-white transition-shadow duration-300 hover:shadow-xl"
               >
                 {/* Course Image */}
@@ -153,7 +155,7 @@ export default function TrendingCourses() {
                   </div>
 
                   {/* Course Stats */}
-                  <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-2 border-t border-gray-100 pt-4  text-xs text-gray-500">
+                  <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-2 border-t border-gray-100 pt-4 text-xs text-gray-500">
                     <span className="flex items-center gap-1">
                       <BookOpen size={13} />
                       {course.lessons} Lessons
@@ -181,9 +183,9 @@ export default function TrendingCourses() {
                   style={{
                     visibility: isHovered ? 'visible' : 'hidden',
                   }}
-                  className={`absolute ${
-                    course.id === 4 ? 'left-1/5' : 'left-4/5'
-                  } top-[48%] h-103 z-20 w-[calc(100%+40px)] max-w-[350px] -translate-x-1/2 -translate-y-[48%] bg-white p-6 shadow-[0_15px_45px_rgba(0,0,0,0.16)] transition-all duration-300 sm:p-7`}
+                  className={`absolute left-1/2 ${
+                    course.id === 4 ? 'sm:left-1/5' : 'sm:left-4/5'
+                  } top-[48%] z-20 h-103 w-[calc(100%-1rem)] max-w-[350px] -translate-x-1/2 -translate-y-[48%] bg-white p-6 shadow-[0_15px_45px_rgba(0,0,0,0.16)] transition-all duration-300 sm:w-[calc(100%+40px)] sm:p-7`}
                 >
                   <h3 className="text-xl font-semibold leading-7 text-[#10282c]">
                     {course.title}

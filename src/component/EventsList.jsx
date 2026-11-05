@@ -10,7 +10,7 @@ const events = [
     date: '4',
     month: 'OCT',
     year: '2024',
-    image: '', // Add your image URL here
+    image: 'https://cdn.prod.website-files.com/66cbf9eecd2d43a6644e1854/66e3fd546621c8e4562b7472_Event%20Image-p-500.webp', 
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const events = [
     date: '12',
     month: 'OCT',
     year: '2024',
-    image: '', // Add your image URL here
+    image: 'https://cdn.prod.website-files.com/66cbf9eecd2d43a6644e1854/66e3fd84d5ee3e9e2dc6737c_Event%20Image-3-p-500.webp',
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const events = [
     date: '18',
     month: 'OCT',
     year: '2024',
-    image: '', // Add your image URL here
+    image: 'https://cdn.prod.website-files.com/66cbf9eecd2d43a6644e1854/66e3fea59a7a20a9116a4089_Event%20Image-4-p-500.webp', 
   },
   {
     id: 4,
@@ -40,7 +40,7 @@ const events = [
     date: '22',
     month: 'OCT',
     year: '2024',
-    image: '', // Add your image URL here
+    image: 'https://cdn.prod.website-files.com/66cbf9eecd2d43a6644e1854/66e3fef7b390a845ab7ed21b_Event%20Image-2-p-500.webp', 
   },
   {
     id: 5,
@@ -50,7 +50,7 @@ const events = [
     date: '25',
     month: 'OCT',
     year: '2024',
-    image: '', // Add your image URL here
+    image: 'https://cdn.prod.website-files.com/66cbf9eecd2d43a6644e1854/66e3fd456d37a4f19469ab68_Event%20Image-7-p-500.webp', 
   },
   {
     id: 6,
@@ -60,7 +60,7 @@ const events = [
     date: '30',
     month: 'OCT',
     year: '2024',
-    image: '', // Add your image URL here
+    image: 'https://cdn.prod.website-files.com/66cbf9eecd2d43a6644e1854/66e40042a1bb76d626e145ba_Event%20Image-5-p-500.webp', 
   },
 ]
 

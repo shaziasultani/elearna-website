@@ -1,3 +1,4 @@
+
 import React from 'react'
 import { motion } from 'framer-motion'
 import {
@@ -149,7 +150,7 @@ export default function TopCategories() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="flex min-h-[288px] flex-col items-center justify-between gap-8 rounded-md bg-[#f1f1e9] p-7 sm:flex-row sm:p-[30px]"
+          className="flex min-h-[288px] flex-col items-center justify-between gap-8 rounded-md bg-[#f1f1e9] p-7 md:flex-row md:p-[30px]"
         >
           <div className="flex-shrink-0">
             <h2 className="mb-8 max-w-[220px] text-2xl font-semibold leading-8 text-[#142e32]">
@@ -167,7 +168,7 @@ export default function TopCategories() {
           </div>
 
           {/* Video */}
-          <div className="relative w-full overflow-hidden rounded-xl sm:w-[55%]">
+          <div className="relative w-full overflow-hidden rounded-xl md:w-[55%]">
             <video
               className="aspect-[4/3] w-full object-cover"
               src="https://cdn.prod.website-files.com/668cb7adec02e140422345de%2F66c86567624ca9dec83f55cc_Home%20One%20Video-transcode.mp4"
