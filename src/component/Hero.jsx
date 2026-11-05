@@ -56,18 +56,14 @@ export default function Hero() {
             }}
           />
 
-        
           <div className="absolute bottom-0 left-[17%] h-[76%] w-[69%] rounded-t-[48%] rounded-b-[28px] bg-[#123d3c]" />
 
-         
           <div className="absolute inset-x-0 bottom-0 z-10 flex h-full items-end justify-center">
-            {
             <img
               src="https://cdn.prod.website-files.com/668cb7adec02e140422345de/66c6fb8ca55c188e59cf91d8_Banner%20Girl-p-800.webp"
               alt="Student holding books"
               className="h-full w-full object-contain object-bottom"
             />
-            }
           </div>
 
           {/* Achievement Awards Card */}
@@ -75,13 +71,13 @@ export default function Hero() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="absolute bottom-[31%] left-0 z-20 flex items-center gap-4 rounded-lg bg-[#f3f8f2] px-5 py-4 text-[#183b39] shadow-lg sm:left-1"
+            className="absolute bottom-[31%] left-0 z-20 flex items-center gap-2 rounded-lg bg-[#f3f8f2] px-3 py-3 text-[#183b39] shadow-lg sm:left-1 sm:gap-4 sm:px-5 sm:py-4"
           >
-            <Award size={42} strokeWidth={1.3} />
+            <Award size={32} strokeWidth={1.3} className="shrink-0 sm:h-[42px] sm:w-[42px]" />
 
             <div>
-              <p className="text-lg font-bold leading-6">125+</p>
-              <p className="mt-1 whitespace-nowrap text-xs">
+              <p className="text-base font-bold leading-6 sm:text-lg">125+</p>
+              <p className="mt-1 whitespace-nowrap text-[10px] sm:text-xs">
                 Achievement awards
               </p>
             </div>
@@ -92,19 +88,16 @@ export default function Hero() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="absolute bottom-[2%] right-0 z-20 w-[235px] px-5 py-5 text-center sm:right-[2%] sm:w-[260px]"
+            className="absolute bottom-[2%] right-0 z-20 w-[145px] px-2 py-3 text-center sm:right-[2%] sm:w-[200px] sm:px-4 sm:py-4 lg:w-[260px] lg:px-5 lg:py-5"
           >
-
-{/* Trusted By Image */}
-<div className="mt-3 flex justify-center translate-x-[-10px]">
-  <img
-    src="https://cdn.prod.website-files.com/668cb7adec02e140422345de/66f638f0e915508fda239b73_Trusted%20By%20Image.avif"
-    alt="Trusted by students"
-    className="h-auto w-[480px] object-contain"
-  />
-</div>
-
-          
+            {/* Trusted By Image */}
+           <div className="mt-3 flex -translate-x-[15px] justify-center">
+              <img
+                src="https://cdn.prod.website-files.com/668cb7adec02e140422345de/66f638f0e915508fda239b73_Trusted%20By%20Image.avif"
+                alt="Trusted by students"
+                className="h-auto w-full max-w-[145px] object-contain sm:max-w-[200px] lg:max-w-[260px]"
+              />
+            </div>
           </motion.div>
         </motion.div>
 
@@ -119,7 +112,7 @@ export default function Hero() {
             Online Learning
           </p>
 
-          {/* Larger Heading */}
+          {/* Heading */}
           <h1 className="text-[44px] font-bold leading-[1.05] tracking-[-1.5px] sm:text-5xl lg:text-[54px] xl:text-[60px]">
             More then{' '}
             <span className="text-[#ffbd00]">25000+</span>
@@ -129,19 +122,19 @@ export default function Hero() {
             online
           </h1>
 
-          {/* Larger Description */}
+          {/* Description */}
           <p className="mt-6 max-w-[470px] text-base font-medium leading-8 text-gray-200 sm:text-lg">
             Lorem ipsum dolor sit amet consectetur. Gravida enim risus
             sollicitudin mauris tincidunt commodo ornare.
           </p>
 
           {/* Get Started Button */}
-      <Link
-  to="/contact"
-  className="mt-8 inline-flex min-w-[145px] items-center justify-center rounded-[3px] border border-white/20 bg-white/[0.03] px-7 py-4 text-sm font-semibold text-white transition duration-300 hover:scale-95"
->
-  Get Started
-</Link>
+          <Link
+            to="/contact"
+            className="mt-8 inline-flex min-w-[145px] items-center justify-center rounded-[3px] border border-white/20 bg-white/[0.03] px-7 py-4 text-sm font-semibold text-white transition duration-300 hover:scale-95"
+          >
+            Get Started
+          </Link>
         </motion.div>
       </div>
     </section>
